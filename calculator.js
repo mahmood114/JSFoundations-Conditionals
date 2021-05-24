@@ -14,9 +14,13 @@ console.log("\n--------------\n");
 
 let result = 0;
 
-if (operation === "+") result = number1 + number2;
-else if (operation === "-") result = number1 - number2;
-else if (operation === "/") result = number1 / number2;
-else if (operation === "*") result = number1 * number2;
+// if (operation === "+") result = number1 + number2;
+// else if (operation === "-") result = number1 - number2;
+// else if (operation === "/") result = number1 / number2;
+// else if (operation === "*") result = number1 * number2;
 
-console.log(`${number1} ${operation} ${number2} = ${result}`);
+result = operation === "+"? (number1+number2) : operation === "-"? (number1-number2) : operation === "*"? (number1*number2) : operation === "/"? (number1/number2) : Infinity;
+
+if (result == Infinity) 
+    console.log("Invalid operation!")
+else console.log(`${number1} ${operation} ${number2} = ${result}`);
